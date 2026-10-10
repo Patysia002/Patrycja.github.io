@@ -3,101 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ekologia domowa - Strona główna</title>
+    <title>EkoDom - Twój dom przyjazny naturze i portfelowi</title>
 </head>
 <body>
+
+    <!-- PASEK NAWIGACYJNY (Header) -->
     <header>
-        <p><h1><a href = index.html>Zielony dom</a></h1>
-            <a href = "czystydom.html">Czysty dom</a>
-           <a href = zerowastewkuchni.html>Zero waste w kuchni</a>
-           <a href = "ekonawyki.html">Eko nawyki</a>
-           <a href = "oprojekcie.html">O projekcie</a>
-        </p>
+        <div>
+            <a href="index.html"><img src="photos/logo-ekodom.jpg" alt="EkoDom - Twój dom w zgodzie z naturą" style="height: 50px;"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Start</a></li>
+                <li><a href="bazawiedzy.html">Baza wiedzy</a></li>
+                <li><a href="porady.html">Porady</a></li>
+                <li><a href="kalkulator.html">Kalkulator Eko</a></li>
+                <li><a href="sklep.html">Sklep</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+        <div>
+            <form action="#" method="GET">
+                <input type="search" placeholder="Szukaj...">
+                <button type="submit">Szukaj</button>
+            </form>
+            <a href="logowanie.html">Zaloguj się</a>
+        </div>
     </header>
 
-    <section id = glowna>
-        <img src = "">
-        <h1>Twój dom przyjazny naturze i portfelowi</h1>
-        <p>Dowiedz się jak łatwo wprowadzić ekologiczne <br> nawyki w swoim gospodarstwie domowym.</p>
-        <a href = "" class = "button-link">Zacznij tutaj</a>
-        <a href = "" class = "button-link">Oblicz swój ślad ekologiczny</a>
-    </section>
-  
-
-    <section id = kategorie>
-        <h2>Nasze obszary działania</h2>
-        <section class = kategorie>
-            <img src = "">
-            <h3>Oszczędzanie<br>energii</h3>
-        </section>
-        <section class = kategorie>
-            <img src = "">
-            <h3>Gospodarka<br>wodna</h3>
-        </section>
-        <section class = kategorie>
-            <img src = "">
-            <h3>Zerwo Waste &<br>Recykling</h3>
-        </section>
-        <section class = kategorie>
-            <img src = "">
-            <h3>Naturalne środki <br>czystości</h3>
-        </section>
-    </section>
-    
-    <section id = baza_wiedzy>
-        <h2>Baza wiedzy i porady</h2>
+    <main>
+        <!-- SEKCJA GŁÓWNA (Hero) -->
         <section>
-            <img src = "">
-            <h4>Lorem ipsum</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br> Quibusdam maiores, autem in pariatur soluta officia saepe facere<br> velit itaque impedit.</p>
+            <div>
+                <h1>Twój dom przyjazny naturze i portfelowi</h1>
+                <p>Dowiedz się, jak łatwo wprowadzić ekologiczne nawyki w swoim gospodarstwie domowym.</p>
+                <div>
+                    <a href="bazawiedzy.html"><button type="button">Zacznij tutaj</button></a>
+                    <a href="kalkulator.html"><button type="button">Oblicz swój ślad ekologiczny</button></a>
+                </div>
+            </div>
+            <div>
+                <img src="photos/herobanner.jpg" alt="Ekologiczny dom">
+            </div>
         </section>
+
+        <!-- KATEGORIE -->
         <section>
-            <img src = "">
-            <h4>Lorem ipsum</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br> Quibusdam maiores, autem in pariatur soluta officia saepe facere<br> velit itaque impedit.</p>
+            <h2>Nasze obszary działania (Kategorie)</h2>
+            <ul>
+                <li>
+                    <img src="photos/oszczedzanieenergii.jpg" alt="Energia" class = "obszarydzialania">
+                    <h3>Oszczędzanie energii</h3>
+                </li>
+                <li>
+                    <img src="photos/gospodarkawodna.jpg" alt="Woda" class = "obszarydzialania">
+                    <h3>Gospodarka wodna</h3>
+                </li>
+                <li>
+                    <img src="photos/zerowaste.jpg" alt="Odpady" class = "obszarydzialania">
+                    <h3>Zero Waste &amp; Recykling</h3>
+                </li>
+                <li>
+                    <img src="photos/srodkiczystosci.jpg" alt="Naturalne" class = "obszarydzialania">
+                    <h3>Naturalne środki czystości</h3>
+                </li>
+            </ul>
         </section>
+
+        <!-- ZAJAWKA BAZY WIEDZY -->
         <section>
-            <img src = "">
-            <h4>Lorem ipsum</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br> Quibusdam maiores, autem in pariatur soluta officia saepe facere<br> velit itaque impedit.</p>
+            <h2>Ostatnie wpisy z bazy wiedzy</h2>
+            <article>
+                <img src="photos/jakoszczedzacwodewkuchni.jpg">
+                <h3>Jak oszczędzać wodę w kuchni?</h3>
+                <p>Proste codzienne nawyki, które pomogą Ci zmniejszyć rachunki i chronić zasoby naturalne.</p>
+                <a href="artykul-woda.html">Czytaj więcej</a>
+            </article>
+            <article>
+                <img src="photos/kompostownikodadoz.jpg">
+                <h3>Domowy kompostownik od A do Z</h3>
+                <p>Dowiedz się, jak krok po kroku założyć kompostownik w ogrodzie, a nawet w mieszkaniu.</p>
+                <a href="artykul-kompostownik.html">Czytaj więcej</a>
+            </article>
         </section>
 
-    </section>
+        <!-- SEKCJA KALKULATORA -->
+        <section>
+            <div>
+                <h2>Eko-Kalkulator</h2>
+                <p>Sprawdź, ile możesz zaoszczędzić i jak bardzo odciążyć planetę!</p>
+                <a href="kalkulator.html"><button type="button">Uruchom kalkulator</button></a>
+            </div>
+            <div>
+                <img src="photos/ekokalkulator.jpg" alt="Makieta kalkulatora">
+            </div>
+        </section>
 
-    <section id = kalkulator>
-        <img src = "">
-        <h2>Eko-Kalkulator</h2>
-        <p>Sprawdź ile możesz zaoszczędzić<br>i jak bardzo odciążysz planetę!</p>
-    </section>
+        <!-- NEWSLETTER -->
+        <section>
+            <h2>Zapisz się na Eko-Newsletter</h2>
+            <form action="#" method="POST">
+                <input type="email" placeholder="Wpisz swój e-mail" required>
+                <button type="submit">Wyślij</button>
+            </form>
+        </section>
+    </main>
 
-    <section id = newsletter>
-        <form action="/wyslij" method="post">
-             <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-        </form>
-    </section>
+    <!-- STOPKA (Footer) -->
     <footer>
-        <section id = o_nas>
-            <h4>O nas</h4>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit suscipit alias magni dolore numquam recusandae quia sint, veritatis aspernatur repellendus!</p>
+        <section>
+            <h3>O nas</h3>
+            <p>EkoDom to Twój przewodnik po zrównoważonym i oszczędnym życiu w zgodzie z naturą.</p>
         </section>
-        <section id = linki>
-            <h4>Przydatne linki</h4>
-            <a href = "start.html">Start</a>
-            <a href = "porady.html">Porady</a>
-            <a href = "kalkulator.html">Kalkultor Eko</a>
+        <nav>
+            <h3>Przydatne linki</h3>
+            <ul>
+                <li><a href="index.html">Start</a></li>
+                <li><a href="bazawiedzy.html">Baza wiedzy</a></li>
+                <li><a href="porady.html">Porady</a></li>
+                <li><a href="sklep.html">Sklep</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+        <section>
+            <h3>Kontakt</h3>
+            <p>E-mail: kontakt@ekodom.pl</p>
+            <p>Telefon: +48 123 456 789</p>
         </section>
-        <section id = kontakt>
-            <h4>Kontakt</h4>
-            <p>mail</p>
-            <p>telefon</p>
-            <p>adres</p>
-        </section>
-        <section id = socialmedia>
-            <a href = ""><img src = ""></a>
-            <a href = ""><img src = ""></a>
-            <a href = ""><img src = ""></a>
-        </section>
+        <div>
+            <hr>
+            <p>&copy; 2026 EkoDom. Wszystkie prawa zastrzeżone.</p>
+        </div>
     </footer>
+
 </body>
 </html>

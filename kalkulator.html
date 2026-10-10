@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eko-Kalkulator - EkoDom</title>
+</head>
+<body>
+
+    <header>
+        <div>
+        <a href="index.html"><img src="photos/logo-ekodom.jpg" alt="EkoDom - Twój dom w zgodzie z naturą" style="height: 50px;"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Start</a></li>
+                <li><a href="bazawiedzy.html">Baza wiedzy</a></li>
+                <li><a href="porady.html">Porady</a></li>
+                <li><a href="kalkulator.html">Kalkulator Eko</a></li>
+                <li><a href="sklep.html">Sklep</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Eko-Kalkulator</h1>
+            <p>Oblicz swój domowy ślad ekologiczny i zobacz, ile możesz zaoszczędzić, wprowadzając drobne zmiany.</p>
+        </section>
+
+        <!-- Formularz Kalkulatora -->
+        <section>
+            <form action="#" method="POST">
+                <h2>Twoje gospodarstwo domowe:</h2>
+                
+                <fieldset>
+                    <legend>Zużycie wody</legend>
+                    <p>
+                        <label for="woda">Ile średnio osób mieszka w Twoim domu/mieszkaniu?</label><br>
+                        <input type="number" id="woda" name="osoby" min="1" max="15" required>
+                    </p>
+                    <p>
+                        <label>Czy posiadasz zmywarkę?</label><br>
+                        <input type="radio" id="zmywarka-tak" name="zmywarka" value="tak"> <label for="zmywarka-tak">Tak</label>
+                        <input type="radio" id="zmywarka-nie" name="zmywarka" value="nie"> <label for="zmywarka-nie">Nie</label>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Odpady i recykling</legend>
+                    <p>
+                        <label>Czy regularnie segregujesz śmieci?</label><br>
+                        <input type="radio" id="segregacja-tak" name="segregacja" value="tak"> <label for="segregacja-tak">Tak, wszystkie</label>
+                        <input type="radio" id="segregacja-czesc" name="segregacja" value="czesc"> <label for="segregacja-czesc">Tylko niektóre</label>
+                        <input type="radio" id="segregacja-nie" name="segregacja" value="nie"> <label for="segregacja-nie">Nie segreguję</label>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Zużycie energii</legend>
+                    <p>
+                        <label for="zarowki">Jaki procent oświetlenia w domu to żarówki LED?</label><br>
+                        <select id="zarowki" name="zarowki">
+                            <option value="100">Prawie wszystkie (100%)</option>
+                            <option value="50">Około połowa (50%)</option>
+                            <option value="0">Mało lub wcale</option>
+                        </select>
+                    </p>
+                </fieldset>
+
+                <br>
+                <button type="submit">Oblicz mój wynik</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 EkoDom. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+</body>
+</html>

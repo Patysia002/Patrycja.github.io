@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaloguj się - EkoDom</title>
+</head>
+<body>
+
+    <header>
+        <div>
+        <a href="index.html"><img src="photos/logo-ekodom.jpg" alt="EkoDom - Twój dom w zgodzie z naturą" style="height: 50px;"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Start</a></li>
+                <li><a href="bazawiedzy.html">Baza wiedzy</a></li>
+                <li><a href="porady.html">Porady</a></li>
+                <li><a href="kalkulator.html">Kalkulator Eko</a></li>
+                <li><a href="sklep.html">Sklep</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sekcja logowania -->
+        <section>
+            <h1>Zaloguj się do EkoDom</h1>
+            <p>Zaloguj się, aby zapisywać wyniki swoich kalkulacji, śledzić zamówienia i mieć dostęp do dodatkowych materiałów.</p>
+
+            <form action="#" method="POST">
+                <p>
+                    <label for="login-email">Adres e-mail:</label><br>
+                    <input type="email" id="login-email" name="email" required placeholder="twoj@email.pl">
+                </p>
+                <p>
+                    <label for="login-password">Hasło:</label><br>
+                    <input type="password" id="login-password" name="password" required placeholder="••••••••">
+                </p>
+                <p>
+                    <input type="checkbox" id="zapamietaj" name="zapamietaj">
+                    <label for="zapamietaj">Zapamiętaj mnie na tym urządzeniu</label>
+                </p>
+                <p>
+                    <button type="submit">Zaloguj się</button>
+                </p>
+                <p>
+                    <a href="#">Nie pamiętasz hasła?</a>
+                </p>
+            </form>
+        </section>
+
+        <hr>
+
+        <!-- Sekcja rejestracji dla nowych użytkowników -->
+        <section>
+            <h2>Nie masz jeszcze konta?</h2>
+            <p>Zarejestruj się, to zajmie tylko chwilę!</p>
+            
+            <form action="#" method="POST">
+                <p>
+                    <label for="reg-imie">Imię:</label><br>
+                    <input type="text" id="reg-imie" name="imie" required placeholder="Jan">
+                </p>
+                <p>
+                    <label for="reg-email">Adres e-mail:</label><br>
+                    <input type="email" id="reg-email" name="email" required placeholder="twoj@email.pl">
+                </p>
+                <p>
+                    <label for="reg-password">Hasło (min. 8 znaków):</label><br>
+                    <input type="password" id="reg-password" name="password" minlength="8" required placeholder="••••••••">
+                </p>
+                <p>
+                    <input type="checkbox" id="regulamin" name="regulamin" required>
+                    <label for="regulamin">Akceptuję <a href="#">Regulamin serwisu</a> i <a href="#">Politykę Prywatności</a>.</label>
+                </p>
+                <p>
+                    <button type="submit">Zarejestruj się</button>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 EkoDom. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+</body>
+</html>
