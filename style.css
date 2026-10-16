@@ -1,0 +1,122 @@
+body {
+ font-family: Arial, sans-serif;
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+}
+
+header {
+ background-color: white;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 15px 30px;
+} 
+
+header nav ul{
+    display:flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+header nav ul li a{
+ text-decoration: none;
+ color: #556B2F;
+ font-weight: 500;
+}
+
+header nav ul li a:hover{
+    color:#7eaa8093;
+    background-color: #c5e2c54a;
+    padding: 10px 0px 10px 0px;
+}
+
+header > div:last-child{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+}
+
+header form{
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+
+header div{
+    text-decoration: none;
+}
+
+.obszary-dzialania{
+ padding: 60px 20px;
+ background-color: #f9fbf9;
+ text-align: center;
+}
+
+.obszary-dzialania .container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.obszary-dzialania h2{
+    font-size:2rem;
+    color:243e2b;
+    margin-bottom: 10px;
+}
+
+.kategorie-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.kategoria-karta{
+    background-color: #fffcf3;
+    border-radius: 16px;
+    border: 1px solid #e1ebe2;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    transition: transform 0.25s ease, box-shadow 0.25 ease, border-colour 0.25 ease;
+}
+.kategoria-karta:hover img{
+    transform: scale(1.08);
+}
+
+.kategoria-karta h3{
+    margin:0;
+    font-size: 1.15rem;
+    color:#2b3a2f;
+    font-weight: 600;
+}
+
+@media (max-width:900px){
+    .kategorie-grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width:500px){
+    .kategorie-grid{
+        grid-template-columns: repeat(1fr);
+    }
+}
+
+.hero-section{
+    background: linear-gradient(135deg, #f6faf5 0%, #edf5eb 100%);
+    padding: 70px 20px;
+    overflow: hidden;
+}
+
+.hero-container{
+    max-width: 1200px;
+    margin:0 auto;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    gap: 50px;
+}

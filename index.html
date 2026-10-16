@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>EkoDom - Twój dom przyjazny naturze i portfelowi</title>
 </head>
 <body>
 
-    <!-- PASEK NAWIGACYJNY (Header) -->
     <header>
         <div>
-            <a href="index.html"><img src="photos/logo-ekodom.jpg" alt="EkoDom - Twój dom w zgodzie z naturą" style="height: 50px;"></a>
+            <a href="index.html"><img src="photos/logo-ekodom.jpg" alt="EkoDom - Twój dom w zgodzie z naturą" style="height: 80px;"></a>
         </div>
         <nav>
             <ul>
@@ -27,67 +27,68 @@
                 <input type="search" placeholder="Szukaj...">
                 <button type="submit">Szukaj</button>
             </form>
-            <a href="logowanie.html">Zaloguj się</a>
+            <a href="logowanie.html" style = "text-decoration: none; color:#556B2F">Zaloguj się</a>
         </div>
     </header>
 
     <main>
-        <!-- SEKCJA GŁÓWNA (Hero) -->
-        <section>
-            <div>
-                <h1>Twój dom przyjazny naturze i portfelowi</h1>
-                <p>Dowiedz się, jak łatwo wprowadzić ekologiczne nawyki w swoim gospodarstwie domowym.</p>
-                <div>
-                    <a href="bazawiedzy.html"><button type="button">Zacznij tutaj</button></a>
-                    <a href="kalkulator.html"><button type="button">Oblicz swój ślad ekologiczny</button></a>
+        <section class = "herp-section" id = "start">
+            <div class = "container hero-container">
+                <div class = "hero-content">
+                    <span class = "her-badge">Ekologia zaczyna się w domu</span>
+                    <h1>Twój dom przyjazny naturze i portfelowi</h1>
+                    <p class = "hero-description">Dowiedz się, jak łatwo wprowadzić ekologiczne nawyki w swoim gospodarstwie domowym.</p>
+                <div class = "hero-actions">
+                    <a href="bazawiedzy.html" class = "btn btn-primary"><button type="button">Zacznij tutaj</button></a>
+                    <a href="kalkulator.html" class = "btn btn-secondary"><button type="button">Oblicz swój ślad ekologiczny</button></a>
+                </div>
                 </div>
             </div>
-            <div>
+            <div class = "herp-image-wrapper">
                 <img src="photos/herobanner.jpg" alt="Ekologiczny dom">
             </div>
         </section>
 
-        <!-- KATEGORIE -->
-        <section>
+        <section class = "obszary-dzialania" id = "kategorie">
+            <div class = "container">
             <h2>Nasze obszary działania (Kategorie)</h2>
-            <ul>
-                <li>
-                    <img src="photos/oszczedzanieenergii.jpg" alt="Energia" class = "obszarydzialania">
+            <ul class = "kategorie-grid">
+                <li class = "kategoria-karta">
+                    <img src="photos/oszczedzanieenergii.jpg" alt="Energia" class = "obszarydzialania" style="height: 150px;">
                     <h3>Oszczędzanie energii</h3>
                 </li>
-                <li>
-                    <img src="photos/gospodarkawodna.jpg" alt="Woda" class = "obszarydzialania">
+                <li class = "kategoria-karta">
+                    <img src="photos/gospodarkawodna.jpg" alt="Woda" class = "obszarydzialania" style="height: 150px;">
                     <h3>Gospodarka wodna</h3>
                 </li>
-                <li>
-                    <img src="photos/zerowaste.jpg" alt="Odpady" class = "obszarydzialania">
+                <li class = "kategoria-karta">
+                    <img src="photos/zerowaste.jpg" alt="Odpady" class = "obszarydzialania" style="height: 150px;">
                     <h3>Zero Waste &amp; Recykling</h3>
                 </li>
-                <li>
-                    <img src="photos/srodkiczystosci.jpg" alt="Naturalne" class = "obszarydzialania">
+                <li class = "kategoria-karta">
+                    <img src="photos/srodkiczystosci.jpg" alt="Naturalne" class = "obszarydzialania" style="height: 150px;">
                     <h3>Naturalne środki czystości</h3>
                 </li>
             </ul>
+            </div>
         </section>
 
-        <!-- ZAJAWKA BAZY WIEDZY -->
         <section>
             <h2>Ostatnie wpisy z bazy wiedzy</h2>
             <article>
-                <img src="photos/jakoszczedzacwodewkuchni.jpg">
+                <img src="photos/jakoszczedzacwodewkuchni.jpg" style="height: 150px;">
                 <h3>Jak oszczędzać wodę w kuchni?</h3>
                 <p>Proste codzienne nawyki, które pomogą Ci zmniejszyć rachunki i chronić zasoby naturalne.</p>
                 <a href="artykul-woda.html">Czytaj więcej</a>
             </article>
             <article>
-                <img src="photos/kompostownikodadoz.jpg">
+                <img src="photos/kompostownikodadoz.jpg" style="height: 150px;">
                 <h3>Domowy kompostownik od A do Z</h3>
                 <p>Dowiedz się, jak krok po kroku założyć kompostownik w ogrodzie, a nawet w mieszkaniu.</p>
                 <a href="artykul-kompostownik.html">Czytaj więcej</a>
             </article>
         </section>
 
-        <!-- SEKCJA KALKULATORA -->
         <section>
             <div>
                 <h2>Eko-Kalkulator</h2>
@@ -95,11 +96,10 @@
                 <a href="kalkulator.html"><button type="button">Uruchom kalkulator</button></a>
             </div>
             <div>
-                <img src="photos/ekokalkulator.jpg" alt="Makieta kalkulatora">
+                <img src="photos/ekokalkulator.jpg" alt="Makieta kalkulatora" style="height: 150px;">
             </div>
         </section>
 
-        <!-- NEWSLETTER -->
         <section>
             <h2>Zapisz się na Eko-Newsletter</h2>
             <form action="#" method="POST">
@@ -109,7 +109,6 @@
         </section>
     </main>
 
-    <!-- STOPKA (Footer) -->
     <footer>
         <section>
             <h3>O nas</h3>
