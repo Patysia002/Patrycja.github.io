@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eko-Sklep - EkoDom</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- NAGŁÓWEK -->
     <header>
-        <div>
-        <a href="index.html"><img src="photos/logo-ekodom.jpg" alt="EkoDom - Twój dom w zgodzie z naturą" style="height: 50px;"></a>
+        <div class="header-logo">
+            <a href="index.html">
+                <img src="photos/logo-ekodom.jpg" alt="EkoDom - Twój dom w zgodzie z naturą">
+            </a>
         </div>
         <nav>
             <ul>
@@ -21,70 +25,102 @@
                 <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
         </nav>
+        <div class="header-actions">
+            <a href="logowanie.html" class="login-link">Zaloguj się</a>
+        </div>
     </header>
 
-    <main>
-        <section>
+    <!-- GŁÓWNA TREŚĆ SKLEPU -->
+    <main class="container">
+        <section style="margin-top: 40px;">
             <h1>Eko-Sklep</h1>
-            <p>Wybraliśmy dla Ciebie produkty, które pomogą Ci żyć bardziej ekologicznie każdego dnia.</p>
+            <p>Wybraliśmy dla Ciebie produkty, które ułatwiają codzienne życie w zgodzie z naturą i pomagają ograniczyć odpady.</p>
         </section>
 
-        <!-- Filtry i kategorie sklepu -->
-        <aside>
-            <h3>Kategorie produktów:</h3>
-            <ul>
-                <li><a href="#">Wszystkie produkty</a></li>
-                <li><a href="#">Do kuchni</a></li>
-                <li><a href="#">Do łazienki</a></li>
-                <li><a href="#">Zero Waste</a></li>
-                <li><a href="#">Naturalne środki czystości</a></li>
-            </ul>
-        </aside>
+        <!-- UKŁAD SKLEPU: BOCZNE MENU + SIATKA PRODUKTÓW -->
+        <div class="shop-layout">
+            
+            <!-- Boczne filtry i kategorie -->
+            <aside class="shop-sidebar">
+                <h3>Kategorie produktów</h3>
+                <ul>
+                    <li><a href="#">Wszystkie produkty</a></li>
+                    <li><a href="#">Do kuchni</a></li>
+                    <li><a href="#">Do łazienki</a></li>
+                    <li><a href="#">Zero Waste</a></li>
+                    <li><a href="#">Naturalne środki czystości</a></li>
+                </ul>
+            </aside>
 
-        <!-- Lista produktów -->
-        <section>
-            <h2>Nasze produkty</h2>
+            <!-- Lista produktów -->
+            <section class="shop-products">
+                
+                <!-- Produkt 1 -->
+                <article class="product-card">
+                    <img src="https://placehold.co/240x240?text=Torba+bawełniana" alt="Wielorazowa torba bawełniana">
+                    <h3>Torba bawełniana</h3>
+                    <p>Wytrzymała, wykonana w 100% z organicznej bawełny. Idealna na zakupy.</p>
+                    <p class="product-price">19,99 zł</p>
+                    <button type="button" class="btn btn-primary">Dodaj do koszyka</button>
+                </article>
 
-            <!-- Produkt 1 -->
-            <article>
-                <img src="https://placehold.co/200x200?text=Torba+bawełniana" alt="Wielorazowa torba na zakupy">
-                <h3>Wielorazowa torba bawełniana</h3>
-                <p>Wytrzymała, wykonana w 100% z organicznej bawełny. Idealna na codzienne zakupy.</p>
-                <p><strong>Cena: 19,99 zł</strong></p>
-                <button type="button">Dodaj do koszyka</button>
-            </article>
+                <!-- Produkt 2 -->
+                <article class="product-card">
+                    <img src="https://placehold.co/240x240?text=Słomki+bambusowe" alt="Zestaw słomek bambusowych">
+                    <h3>Słomki bambusowe (6 szt.)</h3>
+                    <p>Naturalna alternatywa dla plastiku z dołączonym czyścikiem w zestawie.</p>
+                    <p class="product-price">24,99 zł</p>
+                    <button type="button" class="btn btn-primary">Dodaj do koszyka</button>
+                </article>
 
-            <!-- Produkt 2 -->
-            <article>
-                <img src="https://placehold.co/200x200?text=Słomki+bambusowe" alt="Zestaw słomek bambusowych">
-                <h3>Zestaw słomek bambusowych (6 szt. + czyścik)</h3>
-                <p>Ekologiczna alternatywa dla plastiku. W pełni biodegradowalne i wielokrotnego użytku.</p>
-                <p><strong>Cena: 24,99 zł</strong></p>
-                <button type="button">Dodaj do koszyka</button>
-            </article>
+                <!-- Produkt 3 -->
+                <article class="product-card">
+                    <img src="https://placehold.co/240x240?text=Woskowijki" alt="Naturalne woskowijki">
+                    <h3>Woskowijki (3 szt.)</h3>
+                    <p>Wielorazowe owijki z wosku pszczelego do przechowywania świeżej żywności.</p>
+                    <p class="product-price">39,90 zł</p>
+                    <button type="button" class="btn btn-primary">Dodaj do koszyka</button>
+                </article>
 
-            <!-- Produkt 3 -->
-            <article>
-                <img src="https://placehold.co/200x200?text=Woskowijki" alt="Zestaw woskowijek">
-                <h3>Naturalne Woskowijki (zestaw 3 szt.)</h3>
-                <p>Alternatywa dla folii spożywczej. Pozwalają na ekologiczne przechowywanie żywności.</p>
-                <p><strong>Cena: 39,90 zł</strong></p>
-                <button type="button">Dodaj do koszyka</button>
-            </article>
+                <!-- Produkt 4 -->
+                <article class="product-card">
+                    <img src="https://placehold.co/240x240?text=Szczoteczka+bambusowa" alt="Bambusowa szczoteczka do zębów">
+                    <h3>Szczoteczka bambusowa</h3>
+                    <p>Biodegradowalna rękojeść z naturalnego bambusa, włosie medium.</p>
+                    <p class="product-price">12,50 zł</p>
+                    <button type="button" class="btn btn-primary">Dodaj do koszyka</button>
+                </article>
 
-            <!-- Produkt 4 -->
-            <article>
-                <img src="https://placehold.co/200x200?text=Szczoteczka+bambusowa" alt="Bambusowa szczoteczka do zębów">
-                <h3>Bambusowa szczoteczka do zębów</h3>
-                <p>Z naturalnego bambusa, o średniej twardości włosia. Pomaga ograniczyć zużycie plastiku.</p>
-                <p><strong>Cena: 12,50 zł</strong></p>
-                <button type="button">Dodaj do koszyka</button>
-            </article>
-        </section>
+            </section>
+        </div>
     </main>
 
+    <!-- STOPKA -->
     <footer>
-        <p>&copy; 2026 EkoDom. Wszystkie prawa zastrzeżone.</p>
+        <div class="footer-container">
+            <div>
+                <h3>O nas</h3>
+                <p>EkoDom to Twój przewodnik po zrównoważonym i oszczędnym życiu w zgodzie z naturą.</p>
+            </div>
+            <div>
+                <h3>Przydatne linki</h3>
+                <ul>
+                    <li><a href="index.html">Start</a></li>
+                    <li><a href="bazawiedzy.html">Baza wiedzy</a></li>
+                    <li><a href="porady.html">Porady</a></li>
+                    <li><a href="sklep.html">Sklep</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Kontakt</h3>
+                <p>E-mail: kontakt@ekodom.pl</p>
+                <p>Telefon: +48 123 456 789</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 EkoDom. Wszystkie prawa zastrzeżone.</p>
+        </div>
     </footer>
 
 </body>

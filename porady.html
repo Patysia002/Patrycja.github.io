@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Szybkie Porady - EkoDom</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <div>
-        <a href="index.html"><img src="photos/logo-ekodom.jpg" alt="EkoDom - Twój dom w zgodzie z naturą" style="height: 50px;"></a>
+        <div class="header-logo">
+            <a href="index.html"><img src="photos/logo-ekodom.jpg" alt="EkoDom"></a>
         </div>
         <nav>
             <ul>
@@ -21,84 +22,39 @@
                 <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
         </nav>
+        <div class="header-actions">
+            <a href="logowanie.html" class="login-link">Zaloguj się</a>
+        </div>
     </header>
 
-    <main>
-        <section>
-            <h1>Szybkie Eko-Porady</h1>
-            <p>Małe zmiany, wielkie rezultaty. Wybierz kategorię i sprawdź, co możesz zrobić już dziś!</p>
-        </section>
+    <main class="container" style="max-width: 900px; margin: 40px auto;">
+        <h1>Szybkie Eko-Porady</h1>
+        <p>Małe nawyki, które przynoszą wielkie oszczędności.</p>
 
-        <!-- Filtrowanie/Kategorie porad -->
-        <nav>
+        <section class="form-card">
+            <h2>🍳 W kuchni</h2>
             <ul>
-                <li><a href="#kuchnia">Kuchnia</a></li>
-                <li><a href="#lazienka">Łazienka</a></li>
-                <li><a href="#zakupy">Zakupy</a></li>
-                <li><a href="#ogrod">Ogród i Balkon</a></li>
-            </ul>
-        </nav>
-
-        <!-- Sekcja Kuchnia -->
-        <section id="kuchnia">
-            <h2>W kuchni</h2>
-            <ul>
-                <li>
-                    <strong>Gotuj pod przykryciem:</strong> 
-                    Używanie pokrywek skraca czas gotowania i pozwala zaoszczędzić do 30% energii (gazu lub prądu).
-                </li>
-                <li>
-                    <strong>Nie otwieraj piekarnika w trakcie pieczenia:</strong> 
-                    Każde uchylenie drzwiczek obniża temperaturę wewnątrz o kilkanaście stopni, przez co urządzenie zużywa więcej prądu, by ją wyrównać.
-                </li>
-                <li>
-                    <strong>Rozmrażaj jedzenie w lodówce:</strong> 
-                    Przekładając zamrożone produkty do chłodziarki na kilkanaście godzin przed przygotowaniem, „oddają” one zimno, co zmniejsza zużycie energii przez lodówkę.
-                </li>
+                <li><strong>Gotuj pod przykryciem:</strong> Skraca to czas gotowania i oszczędza do 30% energii.</li>
+                <li><strong>Nie otwieraj piekarnika bez potrzeby:</strong> Każde otwarcie to spadek temperatury o kilkanaście stopni.</li>
             </ul>
         </section>
 
-        <!-- Sekcja Łazienka -->
-        <section id="lazienka">
-            <h2>W łazience</h2>
+        <section class="form-card">
+            <h2>🚿 W łazience</h2>
             <ul>
-                <li>
-                    <strong>Zakręcaj wodę podczas mycia zębów:</strong> 
-                    W ten prosty sposób możesz zaoszczędzić nawet kilkanaście litrów wody przy każdym szczotkowaniu.
-                </li>
-                <li>
-                    <strong>Wybierz prysznic zamiast wanny:</strong> 
-                    Szybki, kilkuminutowy prysznic zużywa średnio o połowę mniej wody niż napełnienie całej wanny.
-                </li>
-                <li>
-                    <strong>Uruchamiaj tylko pełną pralkę:</strong> 
-                    Czekaj, aż nazbiera się pełen bęben prania, lub korzystaj z programów „Eko”, które optymalizują zużycie wody i energii.
-                </li>
-            </ul>
-        </section>
-
-        <!-- Sekcja Zakupy -->
-        <section id="zakupy">
-            <h2>Na zakupach</h2>
-            <ul>
-                <li>
-                    <strong>Zawsze miej przy sobie wielorazową torbę:</strong> 
-                    Unikaj kupowania foliowych reklamówek przy kasie. Materiałową torbę zawsze warto mieć w plecaku lub torebce.
-                </li>
-                <li>
-                    <strong>Wybieraj produkty bez zbędnych opakowań:</strong> 
-                    Kupuj warzywa i owoce na wagę, luzem, zamiast tych pakowanych w plastikowe tacki i folie.
-                </li>
-                <li>
-                    <strong>Rób zakupy z listą:</strong> 
-                    Zapobiega to kupowaniu nadmiaru jedzenia, które mogłoby się zmarnować i trafić do śmietnika.
-                </li>
+                <li><strong>Zakręcaj kran podczas mycia zębów:</strong> Zaoszczędzisz kilkanaście litrów wody dziennie.</li>
+                <li><strong>Wybieraj szybki prysznic:</strong> Zużywa o połowę mniej wody niż kąpiel w wannie.</li>
             </ul>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 EkoDom. Wszystkie prawa zastrzeżone.</p>
+        <div class="footer-container">
+            <div>
+                <h3>EkoDom</h3>
+                <p>&copy; 2026 EkoDom. Wszystkie prawa zastrzeżone.</p>
+            </div>
+        </div>
     </footer>
 
 </body>

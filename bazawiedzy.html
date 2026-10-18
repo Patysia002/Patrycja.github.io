@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baza Wiedzy - EkoDom</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <div>
-        <a href="index.html"><img src="photos/logo-ekodom.jpg" alt="EkoDom - Twój dom w zgodzie z naturą" style="height: 50px;"></a>
+        <div class="header-logo">
+            <a href="index.html"><img src="photos/logo-ekodom.jpg" alt="EkoDom"></a>
         </div>
         <nav>
             <ul>
@@ -21,56 +22,58 @@
                 <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
         </nav>
+        <div class="header-actions">
+            <a href="logowanie.html" class="login-link">Zaloguj się</a>
+        </div>
     </header>
 
-    <main>
-        <section>
-            <h1>Baza Wiedzy</h1>
-            <p>Znajdź rzetelne artykuły, poradniki i przewodniki o ekologii w domu.</p>
-            
-            <!-- Filtrowanie/Kategorie -->
-            <div>
-                <h3>Filtruj według kategorii:</h3>
-                <a href="#">Wszystkie</a> | 
-                <a href="#">Energia</a> | 
-                <a href="#">Woda</a> | 
-                <a href="#">Zero Waste</a> | 
-                <a href="#">Eko-chemia</a>
-            </div>
-        </section>
+    <main class="container articles-section">
+        <h1>Baza Wiedzy</h1>
+        <p>Znajdź rzetelne artykuły, poradniki i przewodniki o ekologii w domu.</p>
 
-        <!-- Lista Artykułów -->
-        <section>
-            <h2>Artykuły i Poradniki</h2>
-            
-            <article>
-                <img src="photos/jakoszczedzacwodewkuchni.jpg" alt="Woda">
-                <small>Kategoria: Gospodarka wodna | 12.02.2026</small>
-                <h3>Jak oszczędzać wodę w kuchni?</h3>
-                <p>Oto proste, codzienne nawyki, które pomogą Ci realnie obniżyć rachunki za wodę i chronić środowisko naturalne...</p>
-                <a href="artykul-woda.html">Czytaj dalej &rarr;</a>
+        <div class="articles-grid">
+            <article class="article-card">
+                <img src="photos/jakoszczedzacwodewkuchni.jpg" alt="Woda w kuchni">
+                <div class="article-card-body">
+                    <small>Gospodarka wodna | 12.02.2026</small>
+                    <h3>Jak oszczędzać wodę w kuchni?</h3>
+                    <p>Oto proste, codzienne nawyki, które pomogą Ci obniżyć rachunki za wodę i chronić środowisko naturalne.</p>
+                    <a href="artykul-woda.html">Czytaj dalej &rarr;</a>
+                </div>
             </article>
 
-            <article>
-                <img src="photos/kompostownikodadoz.jpg" alt="Kompost">
-                <small>Kategoria: Zero Waste | 05.02.2026</small>
-                <h3>Domowy kompostownik od A do Z</h3>
-                <p>Nawet mieszkając w bloku możesz przetwarzać bioodpady. Dowiedz się, jaki kompostownik wybrać i jak o niego dbać...</p>
-                <a href="artykul-kompostownik.html">Czytaj dalej &rarr;</a>
+            <article class="article-card">
+                <img src="photos/kompostownikodadoz.jpg" alt="Kompostownik">
+                <div class="article-card-body">
+                    <small>Zero Waste | 05.02.2026</small>
+                    <h3>Domowy kompostownik od A do Z</h3>
+                    <p>Nawet mieszkając w bloku możesz przetwarzać bioodpady. Dowiedz się, jaki kompostownik wybrać.</p>
+                    <a href="artykul-kompostownik.html">Czytaj dalej &rarr;</a>
+                </div>
             </article>
 
-            <article>
+            <article class="article-card">
                 <img src="photos/pozeraczepradu.jpg" alt="Prąd">
-                <small>Kategoria: Oszczędzanie energii | 28.01.2026</small>
-                <h3>10 ukrytych pożeraczy prądu w Twoim domu</h3>
-                <p>Urządzenia w trybie stand-by, stare AGD... Sprawdź, co po cichu pobiera najwięcej energii elektrycznej w Twoim gospodarstwie...</p>
-                <a href="artykul-pozeraczepradu.html">Czytaj dalej &rarr;</a>
+                <div class="article-card-body">
+                    <small>Oszczędzanie energii | 28.01.2026</small>
+                    <h3>10 ukrytych pożeraczy prądu w Twoim domu</h3>
+                    <p>Urządzenia w trybie stand-by, stare AGD... Sprawdź, co po cichu pobiera najwięcej energii w gospodarstwie.</p>
+                    <a href="artykul-pozeraczepradu.html">Czytaj dalej &rarr;</a>
+                </div>
             </article>
-        </section>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 EkoDom. Wszystkie prawa zastrzeżone.</p>
+        <div class="footer-container">
+            <div>
+                <h3>EkoDom</h3>
+                <p>Twój dom w zgodzie z naturą.</p>
+            </div>
+            <div>
+                <p>&copy; 2026 EkoDom. Wszystkie prawa zastrzeżone.</p>
+            </div>
+        </div>
     </footer>
 
 </body>

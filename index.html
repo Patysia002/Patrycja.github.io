@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>EkoDom - Twój dom przyjazny naturze i portfelowi</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- NAGŁÓWEK -->
     <header>
-        <div>
-            <a href="index.html"><img src="photos/logo-ekodom.jpg" alt="EkoDom - Twój dom w zgodzie z naturą" style="height: 80px;"></a>
+        <div class="header-logo">
+            <a href="index.html">
+                <img src="photos/logo-ekodom.jpg" alt="EkoDom - Twój dom w zgodzie z naturą">
+            </a>
         </div>
         <nav>
             <ul>
@@ -22,115 +25,155 @@
                 <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
         </nav>
-        <div>
-            <form action="#" method="GET">
+        <div class="header-actions">
+            <form action="#" method="GET" class="search-form">
                 <input type="search" placeholder="Szukaj...">
                 <button type="submit">Szukaj</button>
             </form>
-            <a href="logowanie.html" style = "text-decoration: none; color:#556B2F">Zaloguj się</a>
+            <a href="logowanie.html" class="login-link">Zaloguj się</a>
         </div>
     </header>
 
     <main>
-        <section class = "herp-section" id = "start">
-            <div class = "container hero-container">
-                <div class = "hero-content">
-                    <span class = "her-badge">Ekologia zaczyna się w domu</span>
+        <!-- SEKCJA HERO -->
+        <section class="hero-section" id="start">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="hero-badge">🌿 Ekologia zaczyna się w domu</span>
                     <h1>Twój dom przyjazny naturze i portfelowi</h1>
-                    <p class = "hero-description">Dowiedz się, jak łatwo wprowadzić ekologiczne nawyki w swoim gospodarstwie domowym.</p>
-                <div class = "hero-actions">
-                    <a href="bazawiedzy.html" class = "btn btn-primary"><button type="button">Zacznij tutaj</button></a>
-                    <a href="kalkulator.html" class = "btn btn-secondary"><button type="button">Oblicz swój ślad ekologiczny</button></a>
+                    <p class="hero-description">Dowiedz się, jak łatwo wprowadzić ekologiczne nawyki w swoim gospodarstwie domowym, obniżyć rachunki i chronić środowisko.</p>
+                    <div class="hero-actions">
+                        <a href="bazawiedzy.html" class="btn btn-primary">Zacznij tutaj</a>
+                        <a href="kalkulator.html" class="btn btn-secondary">Oblicz swój ślad ekologiczny</a>
+                    </div>
                 </div>
+                <div class="hero-image-wrapper">
+                    <img src="photos/herobanner.jpg" alt="Ekologiczny dom i rodzina w ogrodzie">
                 </div>
-            </div>
-            <div class = "herp-image-wrapper">
-                <img src="photos/herobanner.jpg" alt="Ekologiczny dom">
             </div>
         </section>
 
-        <section class = "obszary-dzialania" id = "kategorie">
-            <div class = "container">
-            <h2>Nasze obszary działania (Kategorie)</h2>
-            <ul class = "kategorie-grid">
-                <li class = "kategoria-karta">
-                    <img src="photos/oszczedzanieenergii.jpg" alt="Energia" class = "obszarydzialania" style="height: 150px;">
-                    <h3>Oszczędzanie energii</h3>
-                </li>
-                <li class = "kategoria-karta">
-                    <img src="photos/gospodarkawodna.jpg" alt="Woda" class = "obszarydzialania" style="height: 150px;">
-                    <h3>Gospodarka wodna</h3>
-                </li>
-                <li class = "kategoria-karta">
-                    <img src="photos/zerowaste.jpg" alt="Odpady" class = "obszarydzialania" style="height: 150px;">
-                    <h3>Zero Waste &amp; Recykling</h3>
-                </li>
-                <li class = "kategoria-karta">
-                    <img src="photos/srodkiczystosci.jpg" alt="Naturalne" class = "obszarydzialania" style="height: 150px;">
-                    <h3>Naturalne środki czystości</h3>
-                </li>
-            </ul>
+        <!-- OBSZARY DZIAŁANIA -->
+        <section class="obszary-dzialania" id="kategorie">
+            <div class="container">
+                <h2>Nasze obszary działania</h2>
+                <p class="section-subtitle">Wybierz interesujący Cię temat i dowiedz się, jak krok po kroku wprowadzić zmiany.</p>
+                <ul class="kategorie-grid">
+                    <li class="kategoria-karta">
+                        <a href="artykul-pozeraczepradu.html">
+                            <img src="photos/oszczedzanieenergii.jpg" alt="Energia" class="obszarydzialania">
+                            <h3>Oszczędzanie energii</h3>
+                        </a>
+                    </li>
+                    <li class="kategoria-karta">
+                        <a href="artykul-woda.html">
+                            <img src="photos/gospodarkawodna.jpg" alt="Woda" class="obszarydzialania">
+                            <h3>Gospodarka wodna</h3>
+                        </a>
+                    </li>
+                    <li class="kategoria-karta">
+                        <a href="artykul-kompostownik.html">
+                            <img src="photos/zerowaste.jpg" alt="Odpady" class="obszarydzialania">
+                            <h3>Zero Waste &amp; Recykling</h3>
+                        </a>
+                    </li>
+                    <li class="kategoria-karta">
+                        <a href="bazawiedzy.html">
+                            <img src="photos/srodkiczystosci.jpg" alt="Naturalne środki czystości" class="obszarydzialania">
+                            <h3>Naturalne środki czystości</h3>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
 
-        <section>
+        <!-- OSTATNIE WPISY Z BAZY WIEDZY -->
+        <section class="articles-section container">
             <h2>Ostatnie wpisy z bazy wiedzy</h2>
-            <article>
-                <img src="photos/jakoszczedzacwodewkuchni.jpg" style="height: 150px;">
-                <h3>Jak oszczędzać wodę w kuchni?</h3>
-                <p>Proste codzienne nawyki, które pomogą Ci zmniejszyć rachunki i chronić zasoby naturalne.</p>
-                <a href="artykul-woda.html">Czytaj więcej</a>
-            </article>
-            <article>
-                <img src="photos/kompostownikodadoz.jpg" style="height: 150px;">
-                <h3>Domowy kompostownik od A do Z</h3>
-                <p>Dowiedz się, jak krok po kroku założyć kompostownik w ogrodzie, a nawet w mieszkaniu.</p>
-                <a href="artykul-kompostownik.html">Czytaj więcej</a>
-            </article>
+            <div class="articles-grid">
+                <article class="article-card">
+                    <img src="photos/jakoszczedzacwodewkuchni.jpg" alt="Woda w kuchni">
+                    <div class="article-card-body">
+                        <small>Gospodarka wodna</small>
+                        <h3>Jak oszczędzać wodę w kuchni?</h3>
+                        <p>Proste codzienne nawyki, które pomogą Ci zmniejszyć rachunki i chronić zasoby naturalne.</p>
+                        <a href="artykul-woda.html">Czytaj więcej &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <img src="photos/kompostownikodadoz.jpg" alt="Kompostownik">
+                    <div class="article-card-body">
+                        <small>Zero Waste</small>
+                        <h3>Domowy kompostownik od A do Z</h3>
+                        <p>Dowiedz się, jak krok po kroku założyć kompostownik w ogrodzie, a nawet w mieszkaniu.</p>
+                        <a href="artykul-kompostownik.html">Czytaj więcej &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <img src="photos/pozeraczepradu.jpg" alt="Prąd">
+                    <div class="article-card-body">
+                        <small>Oszczędzanie energii</small>
+                        <h3>10 ukrytych pożeraczy prądu w Twoim domu</h3>
+                        <p>Urządzenia w trybie stand-by, które po cichu pobierają najwięcej energii w gospodarstwie.</p>
+                        <a href="artykul-pozeraczepradu.html">Czytaj więcej &rarr;</a>
+                    </div>
+                </article>
+            </div>
         </section>
 
-        <section>
-            <div>
-                <h2>Eko-Kalkulator</h2>
-                <p>Sprawdź, ile możesz zaoszczędzić i jak bardzo odciążyć planetę!</p>
-                <a href="kalkulator.html"><button type="button">Uruchom kalkulator</button></a>
-            </div>
-            <div>
-                <img src="photos/ekokalkulator.jpg" alt="Makieta kalkulatora" style="height: 150px;">
+        <!-- SEKCJA KALKULATORA -->
+        <section class="calc-teaser">
+            <div class="container calc-teaser-container">
+                <div>
+                    <h2>Eko-Kalkulator</h2>
+                    <p>Sprawdź, ile możesz zaoszczędzić i jak bardzo odciążyć planetę!</p>
+                    <a href="kalkulator.html" class="btn btn-primary">Uruchom kalkulator</a>
+                </div>
+                <div>
+                    <img src="photos/ekokalkulator.jpg" alt="Makieta kalkulatora">
+                </div>
             </div>
         </section>
 
-        <section>
-            <h2>Zapisz się na Eko-Newsletter</h2>
-            <form action="#" method="POST">
-                <input type="email" placeholder="Wpisz swój e-mail" required>
-                <button type="submit">Wyślij</button>
-            </form>
+        <!-- NEWSLETTER -->
+        <section class="newsletter-section">
+            <div class="container">
+                <h2>Zapisz się na Eko-Newsletter</h2>
+                <p>Otrzymuj raz w miesiącu dawkę inspiracji i eko-porad prosto na swój e-mail.</p>
+                <form action="#" method="POST" class="newsletter-form">
+                    <input type="email" placeholder="Wpisz swój e-mail" required>
+                    <button type="submit">Zapisz się</button>
+                </form>
+            </div>
         </section>
     </main>
 
+    <!-- STOPKA -->
     <footer>
-        <section>
-            <h3>O nas</h3>
-            <p>EkoDom to Twój przewodnik po zrównoważonym i oszczędnym życiu w zgodzie z naturą.</p>
-        </section>
-        <nav>
-            <h3>Przydatne linki</h3>
-            <ul>
-                <li><a href="index.html">Start</a></li>
-                <li><a href="bazawiedzy.html">Baza wiedzy</a></li>
-                <li><a href="porady.html">Porady</a></li>
-                <li><a href="sklep.html">Sklep</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-            </ul>
-        </nav>
-        <section>
-            <h3>Kontakt</h3>
-            <p>E-mail: kontakt@ekodom.pl</p>
-            <p>Telefon: +48 123 456 789</p>
-        </section>
-        <div>
-            <hr>
+        <div class="footer-container">
+            <div>
+                <h3>O nas</h3>
+                <p>EkoDom to Twój przewodnik po zrównoważonym i oszczędnym życiu w zgodzie z naturą.</p>
+            </div>
+            <div>
+                <h3>Przydatne linki</h3>
+                <ul>
+                    <li><a href="index.html">Start</a></li>
+                    <li><a href="bazawiedzy.html">Baza wiedzy</a></li>
+                    <li><a href="porady.html">Porady</a></li>
+                    <li><a href="sklep.html">Sklep</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Kontakt</h3>
+                <p>E-mail: kontakt@ekodom.pl</p>
+                <p>Telefon: +48 123 456 789</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
             <p>&copy; 2026 EkoDom. Wszystkie prawa zastrzeżone.</p>
         </div>
     </footer>

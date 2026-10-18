@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>10 ukrytych pożeraczy prądu w Twoim domu - EkoDom</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- PASEK NAWIGACYJNY (Header) -->
     <header>
-        <div>
-            <a href="index.html"><img src="photos/logo-ekodom.jpg" alt="EkoDom - Twój dom w zgodzie z naturą" style="height: 50px;"></a>
+        <div class="header-logo">
+            <a href="index.html"><img src="photos/logo-ekodom.jpg" alt="EkoDom"></a>
         </div>
         <nav>
             <ul>
@@ -22,131 +22,44 @@
                 <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
         </nav>
-        <div>
-            <form action="#" method="GET">
-                <input type="search" placeholder="Szukaj...">
-                <button type="submit">Szukaj</button>
-            </form>
-            <a href="logowanie.html">Zaloguj się</a>
+        <div class="header-actions">
+            <a href="logowanie.html" class="login-link">Zaloguj się</a>
         </div>
     </header>
 
-    <!-- GŁÓWNA TREŚĆ ARTYKUŁU -->
-    <main>
+    <main class="article-page">
         <article>
-            <nav aria-label="Ścieżka nawigacyjna">
+            <nav class="breadcrumbs">
                 <p><a href="index.html">Start</a> &gt; <a href="bazawiedzy.html">Baza wiedzy</a> &gt; <span>Oszczędzanie energii</span></p>
             </nav>
 
             <header>
-                <h1>10 ukrytych pożeraczy prądu w Twoim domu – jak obniżyć rachunki bez wyrzeczeń?</h1>
-                <p>
-                    <small>Autor: Redakcja EkoDom | Opublikowano: 28 stycznia 2026 | Czas czytania: ok. 7 minut</small>
-                </p>
+                <h1>10 ukrytych pożeraczy prądu w Twoim domu</h1>
+                <p><small>Autor: Redakcja EkoDom | Opublikowano: 28 stycznia 2026</small></p>
             </header>
 
-            <!-- Grafika nagłówkowa artykułu -->
-            <figure>
-                <img src="photos/pozeraczepradu.jpg" alt="Oszczędzanie energii i domowe urządzenia elektryczne" width="300">
-                <figcaption>Wiele domowych urządzeń pobiera prąd nawet wtedy, gdy z nich aktywnie nie korzystasz.</figcaption>
+            <figure class="article-lead-figure">
+                <img src="photos/pozeraczepradu.jpg" alt="Odłączanie listwy zasilającej">
+                <figcaption>Listwa zasilająca z przełącznikiem pozwala wyeliminować zbędny pobór mocy w trybie czuwania.</figcaption>
             </figure>
 
             <section>
-                <h2>Zjawisko „wampirów energetycznych” – o co w tym chodzi?</h2>
-                <p>Nawet jeśli gasisz światło za każdym razem, gdy wychodzisz z pokoju, Twoje rachunki za energię mogą być wyższe, niż się spodziewasz. Odpowiadają za to tzw. <strong>wampiry energetyczne</strong> – sprzęty podłączone do gniazdek na stałe, które cicho pobierają prąd przez całą dobę w trybie czuwania (stand-by) lub podczas pracy w tle.</p>
+                <h2>Wampiry energetyczne w Twoim salonie</h2>
+                <p>Nawet wyłączone urządzenia, jeśli pozostają podpięte do gniazdek zasilających, pobierają prąd na podtrzymanie zegarów, diod czy gotowości do szybkiego startu.</p>
             </section>
 
-            <section>
-                <h2>Oto 10 urządzeń, które najmocniej drenują Twój portfel:</h2>
-
-                <ol>
-                    <li>
-                        <h3>Dekodery telewizyjne i routery Wi-Fi</h3>
-                        <p>Dekodery TV to jedne z najbardziej energochłonnych urządzeń w trybie uśpienia. Często pobierają niemal tyle samo prądu co w trakcie pracy, ponieważ stale sprawdzają aktualizacje i sygnał z satelity bądź kablówki.</p>
-                    </li>
-                    <li>
-                        <h3>Konsole do gier</h3>
-                        <p>Współczesne konsole w trybie szybkiego uruchamiania (Instant-on) pobierają spore ilości energii, aby w tle pobierać łatki gier i szybko się wybudzać. Przełączenie ich w pełny tryb oszczędzania energii pozwala zaoszczędzić kilkadziesiąt złotych rocznie.</p>
-                    </li>
-                    <li>
-                        <h3>Stare lodówki i zamrażarki</h3>
-                        <p>Lodówka pracuje bez przerwy 365 dni w roku. Jeśli ma kilkanaście lat, jest zakamieniona, oblodzona lub ma nieszczelne uszczelki w drzwiach, może zużywać nawet dwukrotnie więcej prądu niż nowoczesny model w klasie energetycznej A lub B.</p>
-                    </li>
-                    <li>
-                        <h3>Komputery stacjonarne i monitory w trybie uśpienia</h3>
-                        <p>Zostawienie włączonego komputera PC na noc lub w trybie uśpienia z podłączonymi akcesoriami (dyski zewnętrzne, podświetlane klawiatury) to ciągły pobór prądu. Listwa z wyłącznikiem załatwia ten problem jednym kliknięciem.</p>
-                    </li>
-                    <li>
-                        <h3>Ładowarki pozostawione w gniazdkach</h3>
-                        <p>Pojedyncza ładowarka do telefonu pobiera ułamek wata, ale pomnóż to przez 5–8 ładowarek podłączonych na stałe w całym mieszkaniu. Po co płacić za prąd, który ucieka w postaci ciepła z nieużywanych zasilaczy?</p>
-                    </li>
-                    <li>
-                        <h3>Czajnik elektryczny z kamieniem</h3>
-                        <p>Grzałka pokryta grubą warstwą kamienia potrzebuje znacznie więcej czasu, aby doprowadzić wodę do wrzenia. Regularne odkamienianie czajnika za pomocą octu lub kwasku cytrynowego skraca czas gotowania i oszczędza energię.</p>
-                    </li>
-                    <li>
-                        <h3>Ekspresy do kawy z podgrzewaną płytą</h3>
-                        <p>Funkcja utrzymywania temperatury dzbanka potrafi zużywać znaczną moc przez wiele godzin. Wyłączaj tę funkcję od razu po zaparzeniu kawy i przelej napar do termosu.</p>
-                    </li>
-                    <li>
-                        <h3>Piekarniki i mikrofalówki z wyświetlaczem zegara</h3>
-                        <p>Zegar na kuchence mikrofalowej lub piekarniku może w skali roku zużyć więcej energii niż samo podgrzewanie potraw, jeśli korzystasz z urządzenia tylko sporadycznie.</p>
-                    </li>
-                    <li>
-                        <h3>Bojlery elektryczne i podgrzewacze wody</h3>
-                        <p>Utrzymywanie wody w wysokiej temperaturze 24 godziny na dobę generuje gigantyczne straty ciepła. Rozważ montaż programatora czasowego, aby bojler grzał wodę tylko wtedy, gdy domownicy są na miejscu.</p>
-                    </li>
-                    <li>
-                        <h3>Klimatyzatory przenośne i farelki</h3>
-                        <p>Dodatkowe dogrzewanie lub schładzanie pomieszczeń sprzętem przenośnym o niskiej efektywności potrafi wygenerować nagły skok rachunku nawet o setki złotych w skali miesiąca.</p>
-                    </li>
-                </ol>
-            </section>
-
-            <section>
-                <h2>Jak skutecznie z nimi walczyć? 3 szybkie kroki:</h2>
-                <ul>
-                    <li><strong>Zastosuj listwy zasilające z wyłącznikiem:</strong> Podłącz sprzęt RTV lub biurowy do jednej listwy i wyłączaj ją na noc jednym przyciskiem.</li>
-                    <li><strong>Kup inteligentne gniazdka (Smart Plug):</strong> Pozwalają mierzyć zużycie prądu w aplikacji i ustawiać harmonogramy wyłączania zasilania.</li>
-                    <li><strong>Sprawdź etykiety energetyczne:</strong> Przy wymianie zużytego sprzętu zawsze zwracaj uwagę na roczne zużycie kWh podane na nowej etykiecie UE.</li>
-                </ul>
-            </section>
-
-            <footer>
-                <h3>Chcesz sprawdzić swoje oszczędności?</h3>
-                <p>Przejdź do naszego kalkulatora i dowiedz się, ile zyskasz dzięki wymianie żarówek i odłączaniu urządzeń z sieci!</p>
-                <p>
-                    <a href="kalkulator.html"><button type="button">Uruchom Eko-Kalkulator</button></a>
-                </p>
-                <hr>
-                <p>
-                    <strong>Przeczytaj także:</strong><br>
-                    &larr; <a href="artykul-woda.html">Jak oszczędzać wodę w kuchni?</a><br>
-                    &rarr; <a href="artykul-kompostownik.html">Domowy kompostownik od A do Z</a>
-                </p>
-            </footer>
+            <p style="margin-top: 40px;">
+                <a href="kalkulator.html" class="btn btn-primary">Przejdź do Eko-Kalkulatora</a>
+            </p>
         </article>
     </main>
 
-    <!-- STOPKA (Footer) -->
     <footer>
-        <section>
-            <h3>O nas</h3>
-            <p>EkoDom to Twój przewodnik po zrównoważonym i oszczędnym życiu w zgodzie z naturą.</p>
-        </section>
-        <nav>
-            <h3>Przydatne linki</h3>
-            <ul>
-                <li><a href="index.html">Start</a></li>
-                <li><a href="bazawiedzy.html">Baza wiedzy</a></li>
-                <li><a href="porady.html">Porady</a></li>
-                <li><a href="sklep.html">Sklep</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-            </ul>
-        </nav>
-        <div>
-            <hr>
-            <p>&copy; 2026 EkoDom. Wszystkie prawa zastrzeżone.</p>
+        <div class="footer-container">
+            <div>
+                <h3>EkoDom</h3>
+                <p>&copy; 2026 EkoDom. Wszystkie prawa zastrzeżone.</p>
+            </div>
         </div>
     </footer>
 

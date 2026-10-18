@@ -1,122 +1,649 @@
-body {
- font-family: Arial, sans-serif;
- min-height: 100vh;
- display: flex;
- flex-direction: column;
+/* ===================================================
+   RESET I USTAWIENIA BAZOWE
+   =================================================== */
+* {
+    box-sizing: border-box;
 }
 
-header {
- background-color: white;
- display: flex;
- align-items: center;
- justify-content: space-between;
- padding: 15px 30px;
-} 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    color: #333333;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
 
-header nav ul{
-    display:flex;
+main {
+    flex: 1; /* Stopka zawsze trzyma się dołu strony */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===================================================
+   NAGŁÓWEK (HEADER I NAWIGACJA)
+   =================================================== */
+header {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-logo img {
+    height: 60px;
+    display: block;
+}
+
+header nav ul {
+    display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
     gap: 20px;
 }
 
-header nav ul li a{
- text-decoration: none;
- color: #556B2F;
- font-weight: 500;
+header nav ul li a {
+    text-decoration: none;
+    color: #556B2F;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s, color 0.2s;
 }
 
-header nav ul li a:hover{
-    color:#7eaa8093;
-    background-color: #c5e2c54a;
-    padding: 10px 0px 10px 0px;
+header nav ul li a:hover {
+    color: #2e6931;
+    background-color: #eaf4eb;
 }
 
-header > div:last-child{
+.header-actions {
     display: flex;
     align-items: center;
     gap: 15px;
-    text-decoration: none;
 }
 
-header form{
+.search-form {
     display: flex;
     align-items: center;
-    gap:5px;
+    gap: 6px;
 }
 
-header div{
+.search-form input {
+    padding: 8px 12px;
+    border: 1px solid #c2d6c4;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.search-form button {
+    padding: 8px 14px;
+    background-color: #556B2F;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.search-form button:hover {
+    background-color: #3b4c1f;
+}
+
+.login-link {
     text-decoration: none;
+    color: #556B2F;
+    font-weight: 600;
+    padding: 8px 14px;
+    border: 1px solid #556B2F;
+    border-radius: 6px;
+    transition: all 0.2s;
 }
 
-.obszary-dzialania{
- padding: 60px 20px;
- background-color: #f9fbf9;
- text-align: center;
+.login-link:hover {
+    background-color: #556B2F;
+    color: #ffffff;
 }
 
-.obszary-dzialania .container{
-    max-width: 1200px;
-    margin: 0 auto;
+/* ===================================================
+   PRZYCISKI (OGÓLNE)
+   =================================================== */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    border: none;
+    text-align: center;
 }
 
-.obszary-dzialania h2{
-    font-size:2rem;
-    color:243e2b;
+.btn-primary {
+    background-color: #3b873e;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(59, 135, 62, 0.25);
+}
+
+.btn-primary:hover {
+    background-color: #2e6931;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: #ffffff;
+    color: #28442c;
+    border: 2px solid #94b998;
+}
+
+.btn-secondary:hover {
+    border-color: #3b873e;
+    color: #3b873e;
+    transform: translateY(-2px);
+}
+
+/* ===================================================
+   SEKCJA HERO (STRONA GŁÓWNA)
+   =================================================== */
+.hero-section {
+    background: linear-gradient(135deg, #f6faf5 0%, #edf5eb 100%);
+    padding: 60px 20px;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 550px;
+}
+
+.hero-badge {
+    display: inline-block;
+    background-color: #e2f2e3;
+    color: #2e7d32;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    font-size: 2.6rem;
+    line-height: 1.2;
+    color: #1f3825;
+    margin: 0 0 15px 0;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: #4a5d4e;
+    margin: 0 0 25px 0;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hero-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+/* ===================================================
+   SEKCJA: OBSZARY DZIAŁANIA (KATEGORIE)
+   =================================================== */
+.obszary-dzialania {
+    padding: 60px 20px;
+    background-color: #f9fbf9;
+    text-align: center;
+}
+
+.obszary-dzialania h2 {
+    font-size: 2rem;
+    color: #243e2b;
     margin-bottom: 10px;
 }
 
-.kategorie-grid{
+.obszary-dzialania .section-subtitle {
+    color: #556B2F;
+    margin-bottom: 35px;
+}
+
+.kategorie-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
     list-style: none;
     padding: 0;
     margin: 0;
-    list-style: none;
 }
 
-.kategoria-karta{
-    background-color: #fffcf3;
+.kategoria-karta {
+    background-color: #ffffff;
     border-radius: 16px;
     border: 1px solid #e1ebe2;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-    transition: transform 0.25s ease, box-shadow 0.25 ease, border-colour 0.25 ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    padding: 30px 15px;
 }
-.kategoria-karta:hover img{
+
+.kategoria-karta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    border-color: #81c784;
+}
+
+.kategoria-karta a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.kategoria-karta img {
+    height: 120px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 15px;
+    transition: transform 0.25s ease;
+}
+
+.kategoria-karta:hover img {
     transform: scale(1.08);
 }
 
-.kategoria-karta h3{
-    margin:0;
+.kategoria-karta h3 {
+    margin: 0;
     font-size: 1.15rem;
-    color:#2b3a2f;
+    color: #2b3a2f;
     font-weight: 600;
 }
 
-@media (max-width:900px){
-    .kategorie-grid{
-        grid-template-columns: repeat(2,1fr);
-    }
-}
-@media (max-width:500px){
-    .kategorie-grid{
-        grid-template-columns: repeat(1fr);
-    }
+/* ===================================================
+   SIATKA ARTYKUŁÓW I BLOGA (BAZA WIEDZY / GLOWNA)
+   =================================================== */
+.articles-section {
+    padding: 60px 20px;
 }
 
-.hero-section{
-    background: linear-gradient(135deg, #f6faf5 0%, #edf5eb 100%);
-    padding: 70px 20px;
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.article-card {
+    background: #ffffff;
+    border: 1px solid #e8eee8;
+    border-radius: 12px;
     overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
 }
 
-.hero-container{
-    max-width: 1200px;
-    margin:0 auto;
+.article-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.article-card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.article-card-body small {
+    color: #7b8e7e;
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+}
+
+.article-card-body h3 {
+    margin: 5px 0 10px 0;
+    color: #243e2b;
+}
+
+.article-card-body p {
+    color: #555555;
+    margin-bottom: 15px;
+    flex: 1;
+}
+
+.article-card-body a {
+    color: #3b873e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.article-card-body a:hover {
+    text-decoration: underline;
+}
+
+/* ===================================================
+   SEKCJA KALKULATORA NA STRONIE GŁÓWNEJ
+   =================================================== */
+.calc-teaser {
+    background-color: #f1f8f2;
+    padding: 60px 20px;
+}
+
+.calc-teaser-container {
     display: flex;
     align-items: center;
-    justify-content:space-between;
-    gap: 50px;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.calc-teaser img {
+    max-height: 220px;
+    width: auto;
+}
+
+/* ===================================================
+   NEWSLETTER
+   =================================================== */
+.newsletter-section {
+    background-color: #243e2b;
+    color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.newsletter-section h2 {
+    margin-top: 0;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    max-width: 500px;
+    margin: 20px auto 0;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 12px 16px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+}
+
+.newsletter-form button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    background-color: #6da370;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.newsletter-form button:hover {
+    background-color: #87b98a;
+}
+
+/* ===================================================
+   STRONY Z TREŚCIĄ ARTYKUŁU (np. artykul-woda.html)
+   =================================================== */
+.article-page {
+    max-width: 860px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.breadcrumbs {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.breadcrumbs a {
+    color: #556B2F;
+    text-decoration: none;
+}
+
+.article-page h1 {
+    font-size: 2.2rem;
+    color: #243e2b;
+    line-height: 1.3;
+}
+
+.article-lead-figure {
+    margin: 25px 0;
+}
+
+.article-lead-figure img {
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.article-lead-figure figcaption {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.article-page blockquote {
+    border-left: 4px solid #556B2F;
+    background: #f7faf7;
+    margin: 25px 0;
+    padding: 15px 25px;
+    font-style: italic;
+    color: #2e4e35;
+}
+
+/* ===================================================
+   FORMULARZE: KALKULATOR, KONTAKT, LOGOWANIE
+   =================================================== */
+.form-card {
+    background: #ffffff;
+    border: 1px solid #e1ebe2;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 30px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+fieldset {
+    border: 1px solid #cce0d0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    color: #243e2b;
+    padding: 0 8px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #c2d6c4;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-top: 6px;
+}
+
+/* ===================================================
+   SKLEP (KARTY PRODUKTÓW)
+   =================================================== */
+.shop-layout {
+    display: flex;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.shop-sidebar {
+    width: 240px;
+    background: #fdfdfd;
+    padding: 20px;
+    border: 1px solid #e8eee8;
+    border-radius: 8px;
+}
+
+.shop-products {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #e8eee8;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card img {
+    width: 100%;
+    height: 170px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #243e2b;
+    margin: 10px 0;
+}
+
+/* ===================================================
+   STOPKA (FOOTER)
+   =================================================== */
+footer {
+    background-color: #1e3323;
+    color: #e5ede6;
+    padding: 40px 20px 20px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 30px;
+}
+
+footer h3 {
+    color: #a4d3a8;
+    margin-top: 0;
+}
+
+footer a {
+    color: #e5ede6;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    margin-bottom: 8px;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 30px;
+    padding-top: 15px;
+    font-size: 0.85rem;
+    color: #a0b6a3;
+}
+
+/* ===================================================
+   RESPONSYWNOŚĆ (MEDIA QUERIES)
+   =================================================== */
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .hero-container,
+    .calc-teaser-container,
+    .shop-layout {
+        flex-direction: column;
+    }
+    
+    .kategorie-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .kategorie-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
 }

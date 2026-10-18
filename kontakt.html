@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt - EkoDom</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <div>
-        <a href="index.html"><img src="photos/logo-ekodom.jpg" alt="EkoDom - Twój dom w zgodzie z naturą" style="height: 50px;"></a>
+        <div class="header-logo">
+            <a href="index.html"><img src="photos/logo-ekodom.jpg" alt="EkoDom"></a>
         </div>
         <nav>
             <ul>
@@ -21,63 +22,50 @@
                 <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
         </nav>
+        <div class="header-actions">
+            <a href="logowanie.html" class="login-link">Zaloguj się</a>
+        </div>
     </header>
 
-    <main>
-        <section>
-            <h1>Skontaktuj się z nami</h1>
-            <p>Masz pytania, pomysły na współpracę, a może chcesz podzielić się swoją eko-historią? Napisz do nas!</p>
-        </section>
+    <main class="container" style="max-width: 800px; margin: 40px auto;">
+        <h1>Skontaktuj się z nami</h1>
+        <p>Masz pytania, pomysły na współpracę, a może chcesz podzielić się swoją eko-historią? Napisz do nas!</p>
 
-        <!-- Dane kontaktowe -->
-        <section>
-            <h2>Nasze dane</h2>
-            <address>
-                <strong>EkoDom sp. z o.o.</strong><br>
-                ul. Zielona 12<br>
-                00-001 Warszawa<br>
-                <br>
-                E-mail: <a href="mailto:kontakt@ekodom.pl">kontakt@ekodom.pl</a><br>
-                Telefon: <a href="tel:+48123456789">+48 123 456 789</a>
-            </address>
-        </section>
-
-        <!-- Formularz kontaktowy -->
-        <section>
-            <h2>Napisz do nas bezpośrednio</h2>
+        <div class="form-card">
+            <h2>Napisz wiadomość</h2>
             <form action="#" method="POST">
                 <p>
-                    <label for="imie">Imię i nazwisko / Nazwa:</label><br>
+                    <label for="imie">Imię i nazwisko:</label>
                     <input type="text" id="imie" name="imie" required placeholder="np. Jan Kowalski">
                 </p>
                 <p>
-                    <label for="email">Adres e-mail:</label><br>
-                    <input type="email" id="email" name="email" required placeholder="np. jan@przyklad.pl">
+                    <label for="email">Adres e-mail:</label>
+                    <input type="email" id="email" name="email" required placeholder="twoj@email.pl">
                 </p>
                 <p>
-                    <label for="temat">Temat wiadomości:</label><br>
+                    <label for="temat">Temat wiadomości:</label>
                     <select id="temat" name="temat">
-                        <option value="zapytanie">Pytanie ogólne</option>
-                        <option value="wspolpraca">Propozycja współpracy</option>
-                        <option value="kalkulator">Pytanie do Kalkulatora</option>
-                        <option value="inny">Inny temat</option>
+                        <option value="ogolne">Pytanie ogólne</option>
+                        <option value="wspolpraca">Współpraca</option>
+                        <option value="kalkulator">Pytanie o kalkulator</option>
                     </select>
                 </p>
                 <p>
-                    <label for="wiadomosc">Treść wiadomości:</label><br>
-                    <textarea id="wiadomosc" name="wiadomosc" rows="6" required placeholder="Wpisz tutaj swoją wiadomość..."></textarea>
+                    <label for="wiadomosc">Treść wiadomości:</label>
+                    <textarea id="wiadomosc" name="wiadomosc" rows="5" required placeholder="W czym możemy pomóc?"></textarea>
                 </p>
-                <p>
-                    <input type="checkbox" id="zgoda" name="zgoda" required>
-                    <label for="zgoda">Akceptuję politykę prywatności i wyrażam zgodę na kontakt.</label>
-                </p>
-                <button type="submit">Wyślij wiadomość</button>
+                <button type="submit" class="btn btn-primary">Wyślij wiadomość</button>
             </form>
-        </section>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 EkoDom. Wszystkie prawa zastrzeżone.</p>
+        <div class="footer-container">
+            <div>
+                <h3>EkoDom</h3>
+                <p>&copy; 2026 EkoDom. Wszystkie prawa zastrzeżone.</p>
+            </div>
+        </div>
     </footer>
 
 </body>
